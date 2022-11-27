@@ -25,10 +25,24 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <!-- Added onclick to link clicking generate password button with first prompt -->
+          <button id="generate" class="btn" onclick="writePassword()">Generate Password</button>
         </div>
+        <!-- Created div to apply parameters to password creation choices -->
+        <!-- <div class="hidden" id="criteria">
+            <label for="length">Length</label>
+            <input type="number" id="length" min="8" max="128" />    
+            <label for="numbers">Include Numbers</label>
+            <input type="checkbox" id="numbers" checked />
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" id="symbols" checked />
+            <label for="lowercase">Include Lowercase letters</label>
+            <input type="checkbox" id="lowercase" checked />
+            <label for="uppercase">Include Uppercase letters</label>
+            <input type="checkbox" id="uppercase" checked />
+        </div> -->
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
