@@ -18,7 +18,7 @@ The application is a random password generator that allows the user to select th
 
 ## Installation
 To run the application, simply enter the URL in any browser. <br>
-To install the application locally, clone the repository from GitHub and open the index.js file in a browser.
+To install the application locally, clone the repository from GitHub and open the index.html file in a browser.
 
 ## Usage
 To use the application, first click the "Generate Password" button to begin a series of prompts requesting the user's desired password length and character type. After responding to all prompts, the application will generate a random password that can then be copied to the clipboard.
