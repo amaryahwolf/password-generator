@@ -12,9 +12,9 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 // Main function to create password
-function writePassword() {  
+function writePassword() {
   var passwordLength = selectPasswordLength();
-  var specialChars = selectCharacters(); 
+  var specialChars = selectCharacters();
   var lowerChars = selectLowerChars();
   var upperChars = selectUpperChars();
   var numericChars = selectNumericChars();
@@ -23,7 +23,7 @@ function writePassword() {
   var password = generatePassword(passwordLength, CharsString);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-}  
+}
 
 // Function to prompt user to select password length & validate that password is between 8-128 characters long
 function selectPasswordLength() {
@@ -39,7 +39,7 @@ function selectPasswordLength() {
 function selectCharacters() {
   var specialChars = confirm("Would you like special characters?")
   return specialChars;
-} 
+}
 
 function selectLowerChars() {
   var lowerChars = confirm("Would you like lowercase characters?")
@@ -59,9 +59,9 @@ function selectNumericChars() {
 // Function to ensure that the user has selected at least one character type
 function validateCharactersSelected(specialChars, lowerChars, upperChars, numericChars) {
   if (!specialChars && !numericChars && !lowerChars && !upperChars) {
-  alert("Please select at least one type of character.");
-  writePassword()
-}
+    alert("Please select at least one type of character.");
+    writePassword()
+  }
 }
 
 // Function to join strings of selected character types and return a new string
@@ -86,10 +86,10 @@ function createCharsString(specialChars, lowerChars, upperChars, numericChars) {
 }
 
 // Function to create a random string using the length of the password selected by user and new string containing selected character types
-function generatePassword(length, characters) { 
+function generatePassword(length, characters) {
   for (var i = 0; i < length; i++) {
-  var index = Math.floor(Math.random() * characters.length);
-  str += characters[index];
+    var index = Math.floor(Math.random() * characters.length);
+    str += characters[index];
   }
-return str;
+  return str;
 }
